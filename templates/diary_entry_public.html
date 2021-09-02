@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<style>
+  body {
+    background-image: url("https://images.unsplash.com/photo-1531685250784-7569952593d2?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1267&q=80");
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  input[type=text],
+  select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+
+  input[type=submit] {
+    width: 100%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  input[type=submit]:hover {
+    background-color: #45a049;
+  }
+
+  div {
+    border-radius: 5px;
+    /* background-color: #f2f2f2; */
+    padding: 20px;
+  }
+
+  h1 {
+    color: black;
+    font-size: 30px;
+    text-align: center;
+    font-family: arial, helvetica, sans-serif;
+    padding-top: 10%;
+
+  }
+
+  .button-center {
+    text-align: center;
+    color: black;
+  }
+</style>
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Diary</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="/static/styles/diary_entry.css">
+</head>
+
+<body>
+ 
+  <button id="back" class="btn btn-outline-dark" style="margin: 15px; font-size: 20px;"><a href="{{ url_for('diary_display') }}">Back</a></button>
+  
+  <div>
+    <form action="{{ url_for('upload') }}" method="POST">
+      <label for="title">Title</label>
+      <input type="text" id="title" name="title" placeholder="Your title..">
+
+      <label for="date">Date</label>
+      <input type="text" id="date" name="date" placeholder="Date..">
+
+      <label for="content">Diary Content</label>
+      <input type="text" id="content" name="content" placeholder="Diary Content..">
+
+      <!-- to save in database -->
+
+      <button  name="submitBtn" value="public" type="submit" class="btn btn-primary">Submit</button>
+    </form>
+  </div>
+
+  <!-- 
+  <form method=POST action="{{ url_for('upload') }}">
+    <p><input name="title" id="title" type="text" placeholder="title"></p>
+    <p><input name="date" id="date" type="date" placeholder="date"></p>
+    <p class="text">
+      <textarea name="text" id="comment" placeholder="content">
+        </textarea>
+    </p>
+    <div class="button-center">
+      <button type="submit" id="private" name="submitBtn" value="Private" style=" font-size: 20px;">Private</button>
+      <button type="submit" id="public" name="submitBtn" value="Public" style=" font-size: 20px;">Public</button>
+    </div>
+  </form> -->
+
+</body>
+
+</html>

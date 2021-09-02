@@ -1,0 +1,62 @@
+header {
+    background: lightblue;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  
+  header #logo {
+    max-width: 60px;
+    margin: 10px;
+  }
+  
+  header #site-name {
+    margin: 10px;
+  }
+  
+  header #search {
+    margin: 10px;
+  }
+  
+  .diary-entry-slider {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    overflow-x: hidden;
+  }
+  
+  .diary-entry-slider .entry {
+    background: #d1e8f0;
+    width: 300px;
+    height: 400px;
+    border-radius: 5%;
+    margin: 15px;
+    cursor: pointer;
+  }
+  
+  .diary-entry-slider .entry .entry-top {
+    background-image: url("https://images.unsplash.com/photo-1542087275-ebe6bec55d95?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTZ8fG1vb2R8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1100&q=60");
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 70%;
+    border-radius: inherit;
+  }
+  
+  .diary-entry-slider .entry .entry-top .status {
+    float: right;
+    margin: 10px;
+  }
+  
+  .diary-entry-slider .entry #add-entry {
+    width: 100%;
+    height: 100%;
+  }
+  
+  .arrow :hover {
+    fill: lightblue;
+  }

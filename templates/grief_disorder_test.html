@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grief Disorder Test</title>
+
+    <link rel="stylesheet" href="/static/styles/depression_test.css">
+</head>
+
+<body>
+    <a href="{{ url_for('test_home') }}"><button>Back</button></a>
+    <!-- <button id="back" style="align-self: left;"><a href="{{ url_for('home') }}">Back</a></button> -->
+    <header>
+        <h1 style="color: black;
+                font-size: 30px;
+                text-align: center;
+                font-family: arial, helvetica, sans-serif;">
+                Grief disorder test</h1>
+
+        <!-- <a href="tests.html"><button>Back</button></a> -->
+    </header>
+
+    <div class="question-template">
+        <p class="question">
+            Do you experience intense sorrow and emotional pain many months after the loss?
+        </p>
+        <form action="form-submission-link">
+            <label><input type="radio" name="sorrow" value="one">Never</label><br>
+            <label><input type="radio" name="sorrow" value="two">Rarely</label><br>
+            <label><input type="radio" name="sorrow" value="three">Sometimes</label><br>
+            <label><input type="radio" name="sorrow" value="four">Often</label><br>
+            <label><input type="radio" name="sorrow" value="five">Very Often</label>
+        </form>
+    </div>
+
+    <div class="question-template">
+        <p class="question">
+            Is it difficult to focus on anything other than your lost loved one?
+        </p>
+        <form action="form-submission-link">
+            <label><input type="radio" name="focus" value="one">Never</label><br>
+            <label><input type="radio" name="focus" value="two">Rarely</label><br>
+            <label><input type="radio" name="focus" value="three">Sometimes</label><br>
+            <label><input type="radio" name="focus" value="four">Often</label><br>
+            <label><input type="radio" name="focus" value="five">Very Often</label>
+        </form>
+    </div>
+
+    <div class="question-template">
+        <p class="question">
+            Do you feel numb or detached from other people or activities you once enjoyed?
+        </p>
+        <form action="form-submission-link">
+            <label><input type="radio" name="detachment" value="one">Never</label><br>
+            <label><input type="radio" name="detachment" value="two">Rarely</label><br>
+            <label><input type="radio" name="detachment" value="three">Sometimes</label><br>
+            <label><input type="radio" name="detachment" value="four">Often</label><br>
+            <label><input type="radio" name="detachment" value="five">Very Often</label>
+        </form>
+    </div>
+
+    <button style="margin: 20px;">Submit</button>
+
+    
+    
+</body>
+</html>

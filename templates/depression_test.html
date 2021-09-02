@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="/static/styles/depression_test.css">
+</head>
+
+<body>
+    <header>
+        <a href="{{ url_for('test_home') }}"><button>Back</button></a>
+        <h1>Depression test</h1>
+    </header>
+
+    <div class="question-template">
+        <p class="question">
+            Little interest or pleasure in doing things
+        </p>
+        <form action="form-submission-link">
+            <label><input type="radio" name="interest" value="one">Not at all</label><br>
+            <label><input type="radio" name="interest" value="two">Several days</label><br>
+            <label><input type="radio" name="interest" value="three">More than half the days</label><br>
+            <label><input type="radio" name="interest" value="four">Nearly every day</label>
+        </form>
+    </div>
+
+    <div class="question-template">
+        <p class="question">
+            Feeling down, depressed, or hopeless
+        </p>
+        <form action="form-submission-link">
+            <label><input type="radio" name="mood" value="one">Not at all</label><br>
+            <label><input type="radio" name="mood" value="two">Several days</label><br>
+            <label><input type="radio" name="mood" value="three">More than half the days</label><br>
+            <label><input type="radio" name="mood" value="four">Nearly every day</label>
+        </form>
+    </div>
+
+    <div class="question-template">
+        <p class="question">
+            Trouble falling or staying asleep, or sleeping too much
+        </p>
+        <form action="form-submission-link">
+            <label><input type="radio" name="sleep-schedule" value="one">Not at all</label><br>
+            <label><input type="radio" name="sleep-schedule" value="two">Several days</label><br>
+            <label><input type="radio" name="sleep-schedule" value="three">More than half the days</label><br>
+            <label><input type="radio" name="sleep-schedule" value="four">Nearly every day</label>
+        </form>
+    </div>
+
+    <div class="question-template">
+        <p class="question">
+            Feeling tired or having little energy
+        </p>
+        <form action="form-submission-link">
+            <label><input type="radio" name="energy-level" value="one">Not at all</label><br>
+            <label><input type="radio" name="energy-level" value="two">Several days</label><br>
+            <label><input type="radio" name="energy-level" value="three">More than half the days</label><br>
+            <label><input type="radio" name="energy-level" value="four">Nearly every day</label>
+        </form>
+    </div>
+
+    <div class="question-template">
+        <p class="question">
+            Poor appetite or overeating
+        </p>
+        <form action="form-submission-link">
+            <label><input type="radio" name="appetite" value="one">Not at all</label><br>
+            <label><input type="radio" name="appetite" value="two">Several days</label><br>
+            <label><input type="radio" name="appetite" value="three">More than half the days</label><br>
+            <label><input type="radio" name="appetite" value="four">Nearly every day</label>
+        </form>
+    </div>
+
+    <div class="question-template">
+        <p class="question">
+            Feeling bad about yourself - or that you are a failure or have let yourself or your family down
+        </p>
+        <form action="form-submission-link">
+            <label><input type="radio" name="self-assessment" value="one">Not at all</label><br>
+            <label><input type="radio" name="self-assessment" value="two">Several days</label><br>
+            <label><input type="radio" name="self-assessment" value="three">More than half the days</label><br>
+            <label><input type="radio" name="self-assessment" value="four">Nearly every day</label>
+        </form>
+    </div>
+
+    <div class="question-template">
+        <p class="question">
+            Thoughts that you would be better off dead, or of hurting yourself
+        </p>
+        <form action="form-submission-link">
+            <label><input type="radio" name="self-assessment" value="one">Not at all</label><br>
+            <label><input type="radio" name="self-assessment" value="two">Several days</label><br>
+            <label><input type="radio" name="self-assessment" value="three">More than half the days</label><br>
+            <label><input type="radio" name="self-assessment" value="four">Nearly every day</label>
+        </form>
+    </div>
+
+    <button style="margin: 10px;">Submit</button>
+
+    
+    
+</body>
+</html>

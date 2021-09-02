@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Metrophobic" />
+  <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+  
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.1/socket.io.js" integrity="sha512-q/dWJ3kcmjBLU4Qc47E4A9kTB4m3wuTY7vkFJDTZKjTs8jhyGQnaUrxa0Ytd0ssMZhbNua9hE+E7Qv1j+DyZwA==" crossorigin="anonymous"></script>
+<style>
+body {
+  background-image: url("https://images.unsplash.com/photo-1531685250784-7569952593d2?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1267&q=80");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  margin: 0 auto;
+  max-width: 800px;
+  padding: 0 20px;
+  font-family: Metrophobic, arial;
+}
+
+h2 {
+        color: black;
+        font-size: 50px;
+        text-align: center;
+        /* font-family: arial, helvetica, sans-serif; */
+        font-family: 'Permanent Marker', cursive;
+        margin-bottom: 25px;
+    }
+
+.container {
+  border: 2px solid #dedede;
+  background-color: #f1f1f1;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 10px 0;
+}
+
+.darker {
+  border-color: #ccc;
+  background-color: #ddd;
+}
+
+.container::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.container img {
+  float: left;
+  max-width: 60px;
+  width: 100%;
+  margin-right: 20px;
+  border-radius: 50%;
+}
+
+.container img.right {
+  float: right;
+  margin-left: 20px;
+  margin-right:0;
+}
+
+
+.chat-center {
+        text-align: center;
+        font-size: 20px;
+    }
+</style>
+</head>
+
+<!-- script for chatroom using socket io -->
+<script type="text/javascript">
+
+$(document).ready(function() {
+
+  var socket = io.connect('http://127.0.0.1:5000/');
+
+  socket.on('connect', function() {
+    socket.send('User has connected!');
+  });
+
+  socket.on('message', function(msg) {
+    console.log(msg);
+    $('#chat-container').append( '<div class="chat-container"><div class="container"><img src="/static/avatar1.png" alt="Avatar" style="width:100%;"><p>' + msg +'</p></div>');
+    console.log('Received message');
+  })
+
+  $('#submitBtn').on('click', function() {
+    socket.send($('#chatbox').val());
+    // $('#chatbox').val('');
+  });
+
+})
+
+</script>
+<body>
+
+<button id="back" class="btn btn-outline-dark" style="align-self: left; font-size: 15px; margin: 15px;"><a href="{{ url_for('home') }}">Back</a></button>
+<h2>Chat Messages</h2>
+
+<div id='chat-container'>
+  <!-- <div class="container">
+    <img src="/static/avatar1.png" alt="Avatar" style="width:100%;">
+    <p>Hello. How are you today?</p>
+  </div>
+  
+  {% if data %}
+      <div class="container darker">
+      <img src="/static/avatar2.png" alt="Avatar" class="right" style="width:100%;">
+      <p>{{data.chatbox}}</p>
+      </div>
+      {% endif %} -->
+</div>
+
+
+
+<div class = "chat-center">
+    <div>
+        <form action="chat_room" method="POST">
+          <label for="char" style="font-family: Metrophobic, arial;">ChatBox</label>
+          <input type="text" id="chatbox" name="chatbox" placeholder="Reply..">
+    
+          <button id="submitBtn"  type="button" class="btn btn-primary">Send</button>
+        </form>
+      </div>
+</div>
+
+
+</body>
+</html>

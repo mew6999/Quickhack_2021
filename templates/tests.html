@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Metrophobic" />
+    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/styles/test.css">
+</head>
+
+<body>
+    <header>
+        <h1>Mental Health Tests</h1>
+    </header>
+
+    <div class="test-template">
+        <a href="{{ url_for('depression_test') }}">
+            <span class="link"></span>
+          </a>
+        <p class="title">Depression test</p>
+        <div class="description">
+            <p>According to the NIMH Major Depressive Disorder is one of the most 
+                common mental disorders affecting more than 17.3 million adults in the United States 
+                (7.1% of the population). Take this self-assessment test to see if you could benefit 
+                from the treatment and support of a mental health professional.</p>
+        </div>
+    </div>
+
+    <div class="test-template">
+        <a href="{{ url_for('test') }}">
+            <span class="link"></span>
+          </a>
+        <p class="title">Complicated Grief Disorder Test</p>
+        <p class="description">The stages of grief are universal to everyone faced with mourning the 
+            loss of a loved one, but if you experience prolonged grief symptoms you may be suffering 
+            from Complicated Grief Disorder (CGD). Take this self-assessment test to determine if you 
+            could benefit from the help of a mental health professional</p>
+    </div>
+
+    <a id="home-button" href="{{ url_for('home') }}"><button class="btn btn-outline-dark">Home</button><a>
+
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<style>
+    
+    ul {
+        color: black;
+        list-style-type: upper-roman;
+        font-size: 20px;
+        padding-right: 10%;
+        font-family: 'Metrophobic', arial;
+        /* font-family: arial, helvetica, sans-serif; */
+    }
+
+    body {
+        background-image: url("https://images.unsplash.com/photo-1531685250784-7569952593d2?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1267&q=80");
+        background-attachment: fixed;
+        background-size: cover;
+        background-repeat: no-repeat;
+        color: white;
+    }
+</style>
+
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Metrophobic" />
+    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/index.css') }}">
+    
+    <meta charset="UTF-8" />
+    <title>Instructions</title>
+    <button id="back" style="float: left; font-size: 30px;" class="btn btn-outline-dark"><a href="{{ url_for('home') }}">Back</a></button>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <h3 style="color: black;
+        font-size: 50px;
+        text-align: center;
+        font-family: 'Permanent Marker', cursive;
+        padding-top: 50px;">Instructions</h3>
+        <br><br>
+        <ul class="list-group">
+            <li class="list-group-item">1) Click on the diary buttons to view or write private and public diaries.
+                You can type whatever you may feel and it will stay secure and with you for as long as you need. </li>
+            <li class="list-group-item">2) Click on the Test button to take some mental health tests.</li>
+            <li class="list-group-item">3) Click on the Chat button to start a conversation with us.</li>
+
+        </ul>
+    </div>
+</body>
+
+</html>

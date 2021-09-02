@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<style>
+    body {
+        background-image: url("https://images.unsplash.com/photo-1531685250784-7569952593d2?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1267&q=80");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+    }
+
+    h1 {
+        color: black;
+        font-size: 50px;
+        text-align: center;
+        font-family: 'Permanent Marker', cursive;
+        padding-top: 10px;
+        padding-bottom: 20px;
+    }
+
+    h2 {
+        color: black;
+        font-size: 30px;
+        text-align: center;
+        font-family: 'Metrophobic', arial;
+    }
+
+    .button-center {
+        text-align: center;
+    }
+
+    .button-center button {
+        font-family: 'Metrophobic', arial;
+        font-size: 25px;
+        margin-bottom: 25px;
+        margin-left: 5px;
+    }
+
+</style>
+
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Metrophobic" />
+    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    
+    <meta charset="UTF-8" />
+    <title>Mental Health App</title>
+    <button id="instructions" style="align-self: right; font-size: 30px;" class="btn"><a
+            href="{{ url_for('instruction') }}"><i class="fas fa-info-circle"></i></a></button>
+
+</head>
+
+<body>
+    <h1>
+        Mental Health App</h1>
+    <br>
+    <h2>
+        To view Diary! 
+    </h2>
+
+    <div class="button-center">
+        <button id="diary_private" class="btn btn-outline-dark"><a href="{{ url_for('diary_display') }}">My Diaries</a></button>
+        <button id="diary_public" class="btn btn-outline-dark"><a href="{{ url_for('public_diaries') }}">Public Diaries</a></button>
+        </div>
+
+    <h2>
+        Share your feeling and experience in your diary!
+    </h2>
+    <div class="button-center">
+
+        <button id="diary_entry1" class="btn btn-outline-dark"><a href="{{ url_for('diary_entry_public') }}">Add Diary in Public</a></button>
+        <button id="diary_entry2" class="btn btn-outline-dark"><a href="{{ url_for('diary_entry_private') }}">Add Diary in Private</a></button>
+    </div>
+
+    <h2>
+        Mental Health Tests!
+    </h2>
+
+    <div class = "button-center">
+        <button id="test" class="btn btn-outline-dark"><a href="{{ url_for('test_home') }}"> Test</a></button>
+    </div>
+
+    <h2>
+        Chat with us!
+    </h2>
+
+    <div class = "button-center">
+        <button id="chat" class="btn btn-outline-dark"><a href="{{ url_for('chat_room') }}"> Chat</a></button>
+    </div>
+
+</body>
+
+</html>

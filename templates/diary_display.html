@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<style>
+  .button-center {
+    text-align: center;
+  }
+
+  h1 {
+    font-family: 'Permanent Marker', cursive;
+    text-align: center;
+    margin: 10px;
+  }
+
+  body {
+    background-image: url("https://images.unsplash.com/photo-1531685250784-7569952593d2?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1267&q=80");
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+</style>
+
+<head>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Metrophobic" />
+  <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Public Dairies</title>
+  <button id="back" style="float: left; font-size: 20px; margin: 15px;" class="btn btn-outline-dark"><a href="{{ url_for('home') }}">Back</a></button>
+  
+  <br><br><br>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+    integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+  <link rel="stylesheet" href="/static/styles/diary_display.css">
+</head>
+
+<body class="container-fluid">
+
+  <h1>Your Diaries</h1>
+
+  <div id="diary-container" class="diary-entry-slider">
+    {# loop through diaries and render them in list #}
+    {% for item in data %}
+    <div class="entry">
+      <div class="entry-top">
+      </div>
+      <div class="entry-bottom">
+        <h3>{{item.title}}</h3>
+        <h4>{{item.date}}</h4>
+        <p>{{item.content}}</p>
+      </div>
+    </div>
+    {% endfor %}
+
+  </div>
+
+</body>
+
+</html>
