@@ -2,7 +2,7 @@
 Take a look if you have mental health issues!
 
 # End User Guild
-This guild will be a step by step guild to user in accessing the application as well as using the features of the application.
+This guide will be a step by step guide for the user to access and use the features of the application.
 
 # Acccessing the application
 User can access to the application by running the web application in a local environment. 
